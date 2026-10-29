@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>نظام متابعة الحلقات القرآنية</title>
+  <meta name="description" content="نظام مبسط لمتابعة الحلقات القرآنية والمعلمين، وتوثيق الملاحظات والإجراءات، وإعداد تقارير المتابعة ومشاركتها.">
+  <meta name="theme-color" content="#123d32">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_SA">
+  <meta property="og:title" content="نظام متابعة الحلقات القرآنية">
+  <meta property="og:description" content="متابعة الحلقات والمعلمين، توثيق الملاحظات، وإصدار تقارير واضحة في مكان واحد.">
+  <meta property="og:image" content="https://YOUR-GITHUB-USERNAME.github.io/quran-circle-followup/preview.svg">
+  <meta property="og:image:alt" content="نظام متابعة الحلقات القرآنية">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="نظام متابعة الحلقات القرآنية">
+  <meta name="twitter:description" content="متابعة الحلقات والمعلمين وإعداد تقارير المتابعة بسهولة.">
+  <meta name="twitter:image" content="https://YOUR-GITHUB-USERNAME.github.io/quran-circle-followup/preview.svg">
+  <style>
+    :root { --green:#123d32; --green2:#1b5a49; --gold:#d6b56d; --ink:#172923; --muted:#61716a; --paper:#f5f8f5; }
+    * { box-sizing:border-box }
+    body { margin:0; font-family:Tahoma,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.8; }
+    .top { padding:18px 6%; display:flex; justify-content:space-between; align-items:center; gap:14px; background:#fff; border-bottom:1px solid #e4ebe6; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; color:var(--green); }
+    .brand-icon { width:42px;height:42px;border-radius:14px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:22px; }
+    .small { font-size:13px; color:var(--muted); }
+    .hero { max-width:1120px; margin:auto; padding:64px 22px 48px; display:grid; grid-template-columns:1.1fr .9fr; gap:38px; align-items:center; }
+    .tag { display:inline-block; border:1px solid #d7e4db; background:#eaf2ec; color:var(--green2); padding:5px 13px; border-radius:999px; font-size:13px; font-weight:700; }
+    h1 { font-size:clamp(32px,4.2vw,52px); line-height:1.35; margin:18px 0 14px; color:var(--green); }
+    .lead { color:#52645b; font-size:18px; max-width:600px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:13px 22px; border-radius:12px; text-decoration:none; font-weight:800; transition:.2s; }
+    .btn-primary { background:var(--green); color:white; box-shadow:0 8px 20px #123d3220; }
+    .btn-primary:hover { background:var(--green2); transform:translateY(-1px); }
+    .btn-secondary { border:1px solid #cfdbd2; color:var(--green); background:#fff; }
+    .visual { background:linear-gradient(145deg,#123d32,#1c5a49); padding:20px; border-radius:28px; box-shadow:0 22px 55px #163d3025; position:relative; overflow:hidden; }
+    .visual:before { content:""; position:absolute; width:220px;height:220px;border:1px solid #ffffff20;border-radius:50%;top:-90px;left:-70px; }
+    .mock { position:relative; background:#fff; border-radius:18px; padding:20px; direction:rtl; }
+    .mock-head { display:flex; justify-content:space-between; align-items:center; gap:10px; padding-bottom:16px; border-bottom:1px solid #edf1ee; }
+    .mock-title { font-weight:800; color:var(--green); }
+    .pill { font-size:11px; background:#e7f4eb;color:#26724d;padding:4px 9px;border-radius:99px; }
+    .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:9px; margin:16px 0; }
+    .stat { padding:12px 9px; background:#f4f8f5; border-radius:12px; }
+    .stat strong { display:block; font-size:22px;color:var(--green); }
+    .stat span { font-size:11px;color:#6b7a72; }
+    .row { display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:1px solid #eef2ef; font-size:13px; }
+    .dot { width:8px;height:8px;border-radius:50%;background:#d5b66d;display:inline-block;margin-left:7px; }
+    .section { background:#fff; padding:46px 6%; }
+    .section-inner { max-width:1120px; margin:auto; }
+    .section h2 { text-align:center; font-size:28px; color:var(--green); margin:0 0 8px; }
+    .section-sub { text-align:center; color:var(--muted); margin:0 auto 28px; max-width:650px; }
+    .features { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+    .feature { border:1px solid #e4ebe6; border-radius:17px; padding:20px; background:#fff; }
+    .feature-icon { width:42px;height:42px;border-radius:13px;background:#edf4ef;display:grid;place-items:center;font-size:21px;margin-bottom:12px; }
+    .feature h3 { font-size:16px; margin:0 0 6px; color:var(--green); }
+    .feature p { font-size:13px; color:var(--muted); margin:0; }
+    .cta { max-width:1120px; margin:34px auto; padding:34px 22px; text-align:center; background:#e8f0e9; border:1px solid #dce8de; border-radius:22px; }
+    .cta h2 { color:var(--green); margin:0 0 8px; }
+    .cta p { color:var(--muted); margin:0 0 18px; }
+    footer { text-align:center; padding:22px; font-size:12px; color:#748078; }
+    @media(max-width:800px) { .hero{grid-template-columns:1fr;padding-top:42px}.visual{max-width:560px;margin:auto;width:100%}.features{grid-template-columns:repeat(2,1fr)}.top{padding:14px 5%} }
+    @media(max-width:480px) { .features{grid-template-columns:1fr}.stats{gap:6px}.stat strong{font-size:18px}.hero{padding-inline:17px}.lead{font-size:16px}.top .small{display:none} }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="brand-icon" aria-hidden="true">۞</span><span>متابعة الحلقات القرآنية</span></div>
+    <span class="small">أداة تنظيم ومتابعة للإشراف القرآني</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="tag">متابعة أوضح • تنظيم أسهل</span>
+        <h1>رعاية الحلقات تبدأ<br>بمتابعة منظّمة</h1>
+        <p class="lead">منصة تساعد المشرف على تنظيم متابعة الحلقات القرآنية والمعلمين، وتوثيق الملاحظات والإجراءات، والرجوع إلى سجل المتابعة وإعداد التقارير بسهولة.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://script.google.com/macros/s/AKfycbyfGoA6uS7M5GyED7eyF55YXgymLyPBDRzp9t6QrKKqo5VNytGFAUzuhLVa4VJnCeslnw/exec" target="_blank" rel="noopener">الدخول إلى نظام المتابعة <span aria-hidden="true">←</span></a>
+          <a class="btn btn-secondary" href="#features">التعرّف على المزايا</a>
+        </div>
+      </div>
+      <div class="visual" aria-label="معاينة توضيحية للوحة المتابعة">
+        <div class="mock">
+          <div class="mock-head"><span class="mock-title">لوحة المتابعة</span><span class="pill">نموذج توضيحي</span></div>
+          <div class="stats">
+            <div class="stat"><strong>الحلقات</strong><span>إدارة بيانات الحلقات</span></div>
+            <div class="stat"><strong>المتابعات</strong><span>سجل موحّد للملاحظات</span></div>
+            <div class="stat"><strong>التقارير</strong><span>ملخصات قابلة للمشاركة</span></div>
+          </div>
+          <div class="row"><span><i class="dot"></i>متابعة أداء الحلقة</span><span>قيد المتابعة</span></div>
+          <div class="row"><span><i class="dot"></i>تسجيل الملاحظات والإجراءات</span><span>موثّق</span></div>
+          <div class="row"><span><i class="dot"></i>إعداد تقرير PDF</span><span>جاهز عند الطلب</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-inner">
+        <h2>كل ما تحتاجه للمتابعة في مكان واحد</h2>
+        <p class="section-sub">واجهة موحّدة تساعد على حفظ تفاصيل المتابعة وتسهيل الرجوع إليها عند الحاجة.</p>
+        <div class="features">
+          <article class="feature"><div class="feature-icon">📚</div><h3>تنظيم الحلقات</h3><p>عرض بيانات الحلقات والفترات والمعلمين في مكان واحد.</p></article>
+          <article class="feature"><div class="feature-icon">📝</div><h3>سجل المتابعات</h3><p>توثيق الملاحظات والإجراءات والنتائج ومواعيد المتابعة القادمة.</p></article>
+          <article class="feature"><div class="feature-icon">📊</div><h3>تقارير واضحة</h3><p>تجهيز ملخصات تساعد على مراجعة الأعمال ومتابعة الأولويات.</p></article>
+          <article class="feature"><div class="feature-icon">📲</div><h3>مشاركة أسهل</h3><p>تسهيل مشاركة تقارير المتابعة عبر واتساب بحسب إمكانات النظام.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>ابدأ متابعة حلقاتك الآن</h2>
+      <p>افتح نظام المتابعة وانتقل مباشرة إلى أدواتك الحالية.</p>
+      <a class="btn btn-primary" href="https://script.google.com/macros/s/AKfycbyfGoA6uS7M5GyED7eyF55YXgymLyPBDRzp9t6QrKKqo5VNytGFAUzuhLVa4VJnCeslnw/exec" target="_blank" rel="noopener">فتح النظام</a>
+    </section>
+  </main>
+  <footer>نظام متابعة الحلقات القرآنية • واجهة تعريفية مستقلة</footer>
+</body>
+</html>

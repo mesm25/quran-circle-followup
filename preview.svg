@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#123d32"/><stop offset="1" stop-color="#1c5a49"/></linearGradient><pattern id="p" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M19 0L38 19 19 38 0 19Z" fill="none" stroke="#ffffff" stroke-opacity=".08"/></pattern></defs>
+<rect width="1200" height="630" rx="0" fill="url(#bg)"/><rect width="1200" height="630" fill="url(#p)"/>
+<circle cx="1010" cy="100" r="240" fill="none" stroke="#d6b56d" stroke-opacity=".35" stroke-width="2"/><circle cx="1010" cy="100" r="195" fill="none" stroke="#ffffff" stroke-opacity=".15" stroke-width="2"/>
+<g font-family="Tahoma,Arial,sans-serif" text-anchor="end" fill="#fff">
+<text x="1040" y="255" font-size="58" font-weight="700">نظام متابعة</text>
+<text x="1040" y="330" font-size="58" font-weight="700">الحلقات القرآنية</text>
+<text x="1040" y="395" font-size="27" fill="#e8d7a9">تنظيم • توثيق • تقارير</text>
+<text x="1040" y="475" font-size="23" fill="#e4eee8">متابعة الحلقات والمعلمين في مكان واحد</text>
+</g>
+<g transform="translate(130 205)" fill="none" stroke="#fff" stroke-width="13" stroke-linejoin="round">
+<path d="M0 0h110v110H0z M22 22h25v25H22z M63 22h25v25H63z M22 63h25v25H22z M63 63h10v10H63z M88 88h22 M88 65v23"/>
+<path d="M126 76l30 30 60-70" stroke="#d6b56d" stroke-width="16" stroke-linecap="round"/>
+</g>
+<rect x="90" y="520" width="1020" height="2" fill="#ffffff" opacity=".25"/>
+<text x="600" y="570" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#e4eee8" text-anchor="middle">واجهة تعريفية لنظام المتابعة</text>
+</svg>
